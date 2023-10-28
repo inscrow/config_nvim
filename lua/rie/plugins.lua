@@ -16,21 +16,23 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 
 require("lazy").setup({
 
-	-- Keybindin helper
-	"folke/which-key.nvim",
-
 	-- Colorschemes
 	"rockerBOO/boo-colorscheme-nvim",
 	"ellisonleao/gruvbox.nvim",
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000
+	},
 
 	-- LSP plugins
-	{"williamboman/mason.nvim"},
-	{"williamboman/mason-lspconfig.nvim"},
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 	{"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
-	{"neovim/nvim-lspconfig"},
-	{"hrsh7th/cmp-nvim-lsp"},
-	{"hrsh7th/nvim-cmp"},
-	{"L3MON4D3/LuaSnip"},
+	"neovim/nvim-lspconfig",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/nvim-cmp",
+	"L3MON4D3/LuaSnip",
 
 	-- Treesitter
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
@@ -42,16 +44,23 @@ require("lazy").setup({
 	},
 
 	-- Tmux navigator
-	{
-		"christoomey/vim-tmux-navigator"
-	},
+	"christoomey/vim-tmux-navigator",
 
 	-- Vim sensible
-	{ "tpope/vim-sensible" },
+	"tpope/vim-sensible",
 
 	-- Statusbar
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = "nvim-tree/nvim-web-devicons"
 	},
+
+	-- Harpoon
+	{
+		"ThePrimeagen/harpoon",
+		dependencies = "nvim-lua/plenary.nvim"
+	},
+
+	-- Git
+	"tpope/vim-fugitive",
 })
