@@ -64,4 +64,10 @@ require("lazy").setup({
 	-- Git
 	"tpope/vim-fugitive",
 	"lewis6991/gitsigns.nvim",
+
+	-- Biscuits
+	{
+		"code-biscuits/nvim-biscuits",
+		dependencies = 'nvim-treesitter/nvim-treesitter',
+	},
 })
