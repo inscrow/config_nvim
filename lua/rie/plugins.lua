@@ -63,11 +63,19 @@ require("lazy").setup({
 
 	-- Git
 	"tpope/vim-fugitive",
-	"lewis6991/gitsigns.nvim",
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup()
+        end,
+    },
 
 	-- Biscuits
 	{
 		"code-biscuits/nvim-biscuits",
-		dependencies = 'nvim-treesitter/nvim-treesitter',
+		dependencies = "nvim-treesitter/nvim-treesitter",
 	},
+
+    -- Over length
+    "lcheylus/overlength.nvim",
 })
