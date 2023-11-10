@@ -5,3 +5,7 @@ vim.o.shiftwidth = 4
 
 -- disable mouse
 vim.o.mouse = false
+
+-- numbers
+vim.o.number = true
+vim.o.relativenumber = true
