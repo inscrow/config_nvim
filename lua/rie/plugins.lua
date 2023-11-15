@@ -78,4 +78,7 @@ require("lazy").setup({
 
     -- Over length
     "lcheylus/overlength.nvim",
+
+    -- javascript better syntax
+    "pangloss/vim-javascript",
 })
