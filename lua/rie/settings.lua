@@ -10,6 +10,12 @@ vim.o.mouse = false
 vim.o.number = true
 vim.o.relativenumber = true
 
+-- disable numbers in terminal mode
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "*",
+    command = "setlocal nonumber norelativenumber"
+})
+
 -- block cursor
 vim.o.guicursor = ""
 
@@ -28,3 +34,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.tabstop = 2
 	end
 })
+
+-- netrw
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
