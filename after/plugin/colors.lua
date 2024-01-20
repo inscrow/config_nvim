@@ -1,7 +1,7 @@
 vim.o.termguicolors = true
 
 vim.api.nvim_create_autocmd('Colorscheme', {
-	pattern = "boo",
+	pattern = "nofrils-light",
 	callback = function()
 		vim.api.nvim_set_hl(0, "Normal", { bg = nil })
 	end
@@ -20,4 +20,9 @@ require("catppuccin").setup({
 	},
 })
 
-vim.cmd.colorscheme "gruvbox"
+require('rose-pine').setup({
+    disable_background = true
+})
+
+-- vim.o.background = 'light'
+vim.cmd.colorscheme "catppuccin"

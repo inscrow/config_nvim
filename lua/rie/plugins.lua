@@ -24,6 +24,10 @@ require("lazy").setup({
 		name = "catppuccin",
 		priority = 1000
 	},
+    { 'rose-pine/neovim', name = 'rose-pine' },
+    "sainnhe/gruvbox-material",
+    "axvr/photon.vim",
+    "robertmeta/nofrils",
 
 	-- LSP plugins
 	"williamboman/mason.nvim",
@@ -70,15 +74,19 @@ require("lazy").setup({
         end,
     },
 
-	-- Biscuits
+	-- Context
 	{
 		"code-biscuits/nvim-biscuits",
 		dependencies = "nvim-treesitter/nvim-treesitter",
 	},
+    "nvim-treesitter/nvim-treesitter-context",
 
     -- Over length
     "lcheylus/overlength.nvim",
 
     -- javascript better syntax
     "pangloss/vim-javascript",
+
+    -- zen mode
+    "folke/zen-mode.nvim",
 })

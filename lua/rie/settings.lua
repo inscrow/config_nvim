@@ -3,8 +3,19 @@ vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 
--- disable mouse
-vim.o.mouse = false
+-- disable mouse and arrow keys
+vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
+vim.keymap.set("", "<left>", "<nop>", { noremap = true })
+vim.keymap.set("", "<right>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<left>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<right>", "<nop>", { noremap = true })
+vim.o.mouse = ""
+
+-- clipboard
+vim.o.clipboard = "unnamedplus"
 
 -- numbers
 vim.o.number = true
@@ -17,7 +28,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 -- block cursor
-vim.o.guicursor = ""
+-- vim.o.guicursor = ""
 
 -- no soft wrapping
 vim.o.wrap = false
