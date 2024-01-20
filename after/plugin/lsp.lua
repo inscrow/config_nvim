@@ -1,5 +1,10 @@
 local lsp_zero = require('lsp-zero')
 
+-- disable virtual text
+vim.diagnostic.config ({
+    virtual_text = false,
+})
+
 lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -22,6 +27,7 @@ require('mason-lspconfig').setup({
 	  "jdtls",   -- java
 	  "clangd",  -- c, c++
 	  "lua_ls",  -- lua
+      "gopls",   -- go
   },
   handlers = {
     lsp_zero.default_setup,
